@@ -1,0 +1,35 @@
+{
+  "name": "weekly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint:fix:md": "lint-md *.md --fix",
+    "prettier:md": "prettier '*.md' --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zero-Rock/weekly.git"
+  },
+  "keywords": [
+    "weekly"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zero-Rock/weekly/issues"
+  },
+  "lint-staged": {
+    "src/**/*.{md,markdown}": [
+      "npm run lint:fix:md",
+      "npm run prettier:md"
+    ]
+  },
+  "homepage": "https://github.com/Zero-Rock/weekly#readme",
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-md-cli": "^0.1.2",
+    "lint-staged": "^12.1.5",
+    "prettier": "^2.5.1"
+  }
+}
