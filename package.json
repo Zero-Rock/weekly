@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint:fix:md": "lint-md *.md --fix",
-    "prettier:md": "prettier '*.md' --write"
+    "prettier:md": "prettier '*.md' --write",
+    "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -20,10 +21,7 @@
     "url": "https://github.com/Zero-Rock/weekly/issues"
   },
   "lint-staged": {
-    "src/**/*.{md,markdown}": [
-      "npm run lint:fix:md",
-      "npm run prettier:md"
-    ]
+    "*.{md,markdown}": "npm run lint:fix:md & npm run prettier:md"
   },
   "homepage": "https://github.com/Zero-Rock/weekly#readme",
   "devDependencies": {
